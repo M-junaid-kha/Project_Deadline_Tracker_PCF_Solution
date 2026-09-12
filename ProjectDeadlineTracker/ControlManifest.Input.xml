@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control
+    namespace="Junaid.PCF"
+    constructor="ProjectDeadlineTracker"
+    version="0.0.1"
+    display-name-key="ProjectDeadlineTracker"
+    description-key="ProjectDeadlineTracker description"
+    control-type="standard">
+
+    <external-service-usage enabled="false">
+    </external-service-usage>
+
+    <property
+      name="progress"
+      display-name-key="Progress"
+      description-key="Project progress from 0 to 100"
+      of-type="Whole.None"
+      usage="bound"
+      required="true" />
+
+      <property
+  name="deadline"
+  display-name-key="Project Deadline"
+  description-key="Project deadline"
+  of-type="DateAndTime.DateAndTime"
+  usage="input"
+  required="false" />
+
+  <property
+    name="isCompleted"
+    display-name-key="IsCompleted_Display_Key"
+    description-key="IsCompleted_Description_Key"
+    of-type="TwoOptions"
+    usage="bound"
+    required="true" />
+
+    <property
+    name="projectName"
+    display-name-key="ProjectName_Display_Key"
+    description-key="ProjectName_Description_Key"
+    of-type="SingleLine.Text"
+    usage="bound"
+    required="true" />
+
+    <resources>
+      <code path="index.ts" order="1"/>
+    </resources>
+
+  </control>
+</manifest>
